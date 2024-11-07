@@ -32,6 +32,12 @@ namespace ControllerViewTask.Controllers
         }
 
         [HttpGet]
+
+        public IActionResult View(int id)
+        {
+            var viewStudent = context.Students.Find(id);
+            return View(viewStudent);
+        }
         public IActionResult Update(int id)
         {
             var originStudent = context.Students.Find(id);

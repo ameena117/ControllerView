@@ -7,7 +7,6 @@
 
 
 <h2 class="toast-header">GetAll</h2>
-
 <table class="table table-hover m-2">
     <thead>
         <tr>
@@ -27,8 +26,9 @@
                 <td>@student.FirstName</td>
                 <td>@student.LastName</td>
                 <td>
-                    <a class="btn btn-outline-primary" asp-action="Update" asp-controller="Students" asp-route-id="@student.Id">Update</a>
-                    <a class="btn btn-outline-danger" asp-action="Delete" asp-controller="Students" asp-route-id="@student.Id">Delete</a>
+                    <a class="btn btn-outline-secondary" asp-action="View" asp-controller="Students" asp-route-id="@student.Id"><i class="bi bi-eye"></i></a>
+                    <a class="btn btn-outline-primary" asp-action="Update" asp-controller="Students" asp-route-id="@student.Id"><i class="bi bi-pencil-square"></i></a>
+                    <a class="btn btn-outline-danger" asp-action="Delete" asp-controller="Students" asp-route-id="@student.Id"><i class="bi bi-trash"></i></a>
                 </td>
             </tr>
         }
