@@ -4,21 +4,24 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a asp-action="GetAll" asp-controller="Students">All Students</a></li>
-                <li><a asp-action="Create" asp-controller="Students">Add Student</a></li>
-            </ul>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand">Student Management System</a>
+                <form class="d-flex">
+                    <button class="btn btn-sm btn-outline-secondary mx-2" asp-action="GetAll" asp-controller="Students">All Students</button>
+                    <button class="btn btn-sm btn-outline-secondary mx-2" asp-action="Create" asp-controller="Students">Add Student</button>
+                </form>
+            </div>
         </nav>
-        <h1>Student Management System</h1>
     </header>
-    <main>
+    <main class="m-2">
         @RenderBody()
     </main>
-    <footer>
+    <footer class="bg-light m-2">
         <p>&copy; 2024 Student Management System. All Rights Reserved.</p>
     </footer>
 
