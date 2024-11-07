@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a asp-action="GetAll" asp-controller="Students">All Students</a></li>
+                <li><a asp-action="Create" asp-controller="Students">Add Student</a></li>
+            </ul>
+        </nav>
+        <h1>Student Management System</h1>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <p>&copy; 2024 Student Management System. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

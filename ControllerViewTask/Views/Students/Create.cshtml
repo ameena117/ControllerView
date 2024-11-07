@@ -1,0 +1,22 @@
+﻿@using ControllerView.Models
+@{
+    Layout = "MainLayout";
+
+}
+
+@model Student
+
+<h1>Create</h1>
+
+<form asp-action="Create" asp-controller="Students">
+    <div>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" />
+    </div>
+   <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+   </div>
+   
+    <button type="submit">Add Student</button>
+</form>

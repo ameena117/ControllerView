@@ -1,0 +1,19 @@
+﻿@using ControllerView.Models
+@model Student
+@{
+    Layout = "MainLayout";
+
+}
+<h1>Update</h1>
+
+<form asp-action="Update" asp-controller="Students">
+    <div>
+        <label asp-for="@Model.FirstName"></label>
+        <input asp-for="@Model.FirstName" />
+    </div>
+    <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+    </div>
+    <button type="submit">Update Student</button>
+</form>
